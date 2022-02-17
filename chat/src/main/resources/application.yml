@@ -6,3 +6,6 @@ spring:
       enabled: false
   freemarker:
     cache: false
+  spring:
+    profiles:
+      active: local
