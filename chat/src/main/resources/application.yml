@@ -9,3 +9,5 @@ spring:
   spring:
     profiles:
       active: local
+  jwt:
+    secret: govlepel@$&
