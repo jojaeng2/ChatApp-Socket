@@ -12,6 +12,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        System.out.println(2);
         http
                 .csrf().disable() // 기본값이 on인 csrf 취약점 보안을 해제
                 .headers()
@@ -39,6 +40,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .password("{noop}1234")
                     .roles("USER")
                 .and()
+
+
                     .withUser("guest")
                     .password("{noop}1234")
                     .roles("GUEST");

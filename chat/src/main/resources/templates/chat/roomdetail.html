@@ -64,6 +64,7 @@
                 this.roomName = localStorage.getItem('wschat.roomName');
                 var _this = this;
                 axios.get('/chat/user').then(response => {
+                    console.log(response);
                     _this.token = response.data.token;
                     ws.connect({"token":_this.token}, function(frame) {
                         ws.subscribe("/sub/chat/room/"+_this.roomId, function(message) {

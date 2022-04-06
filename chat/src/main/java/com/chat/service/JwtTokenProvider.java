@@ -21,6 +21,7 @@ public class JwtTokenProvider {
      */
     public String generateToken(String name) {
         Date now = new Date();
+        System.out.println(4);
         return Jwts.builder()
                 .setId(name)
                 .setIssuedAt(now) // 토큰 발행일자
